@@ -36,7 +36,7 @@ do
     CLIENT_PRIVATE_KEY=$(wg genkey)
     CLIENT_PUBLIC_KEY=$(echo $CLIENT_PRIVATE_KEY | wg pubkey)
     CLIENT_IP="10.66.66.2$i/32"
-    cat > ~/R$i.conf <<EOF
+    cat > /home/ubuntu/R$i.conf <<EOF
 [Interface]
 Address = $CLIENT_IP
 PrivateKey = $CLIENT_PRIVATE_KEY
